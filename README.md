@@ -1,15 +1,15 @@
 [![stability-experimental](https://img.shields.io/badge/stability-experimental-orange.svg)](https://github.com/joethorley/stability-badges#experimental)
 [![Build Status](https://travis-ci.org/rocker-org/binder.svg?branch=master)](https://travis-ci.org/rocker-org/binder)
 [![](https://img.shields.io/docker/pulls/rocker/binder.svg)](https://hub.docker.com/r/rocker/binder) [![](https://img.shields.io/docker/automated/rocker/binder.svg)](https://hub.docker.com/r/rocker/binder/builds)
-<!-- [![](https://images.microbadger.com/badges/image/rocker/binder.svg)](https://microbadger.com/images/rocker/binder) --> 
+<!-- [![](https://images.microbadger.com/badges/image/rocker/binder.svg)](https://microbadger.com/images/rocker/binder) -->
 
 
 
-![](img/rocker.png) ![](img/binder.png) 
+![](img/rocker.png) ![](img/binder.png)
 
 # rocker/binder
 
-Adds [binder](http://mybinder.org/) abilities on top of the [`rocker/geospatial`](https://hub.docker.com/r/rocker/geospatial) images. 
+Adds [binder](http://mybinder.org/) abilities on top of the [`rocker/geospatial`](https://hub.docker.com/r/rocker/geospatial) images.
 
 
 # Deploy methods
@@ -21,8 +21,8 @@ _This approach uses the public binder cloud and requires no installation_
 
 
 Just add a file named `Dockerfile` with the following contents to the root of a GitHub
-repository: 
- 
+repository:
+
 
 ```bash
 FROM rocker/binder:3.4.3
@@ -116,3 +116,6 @@ Or, just get in touch by opening an issue. We'll try and resolve common cases so
 * [Chris Holdgraf](http://github.com/choldgraf/) for this [nice GIF](https://twitter.com/choldgraf/status/921165684188393472)
 * [Tim Head](https://github.com/betatim) for this [nice GIF](https://twitter.com/betatim/status/921156659166277634)
 
+
+# See other examples
+* [R + Python Binder Example- here it mentions the use of `[reticulate](https://rstudio.github.io/reticulate/)`](https://github.com/binder-examples/r_with_python)
