@@ -1,5 +1,14 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
+
+# DEPRECIATED docker build -t amasing-binder .
+# docker build -t amasing-binder-papermill .
+# SAVE THE IMAGE
+# docker save amasing-binder-papermill > amasing-binder-papermill.tar
+# EXPORT CONTAINER
+# docker export amasing-binder > amasing-binder.tar
+
+
 FROM rocker/geospatial:3.5.2
 
 ENV NB_USER rstudio
@@ -57,6 +66,11 @@ RUN R --quiet -e "install.packages(c('biomod2'), dependencies=TRUE )"
 
 ## Run an install.R script, if it exists.
 #RUN if [ -f install.R ]; then R --quiet -f install.R; fi
+
+RUN python3 -m venv ${VENV_DIR} && \
+   pip3 install papermill
+
+RUN R --quiet -e "devtools::install_github('nteract/papermillr')"
 
 CMD jupyter notebook --ip 0.0.0.0
 
